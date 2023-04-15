@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
+import React, { useState, useEffect } from 'react';
+import  returnDummyData from './dummydata.js'
+import Thumbnail from './Thumbnail.js'
+import {Link} from 'react-router-dom';
+import Navbar from './NavBar';
 
 function App() {
+  const [foodItems, setItems] = useState([]);
+  const [sellers, setSellers] = useState([]);
+
+  useEffect(() => {
+    var data = returnDummyData()
+    setItems (data[0])
+    setSellers(data[1])
+  });
+  function displayThumbnails () {
+    var displayArray =[]
+    for (var i = 0 ; i<foodItems.length; i++){
+      displayArray.push(
+        <Thumbnail props = {foodItems[i]} ></Thumbnail>
+        )
+    }
+    return displayArray
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header id="header">
+        <Navbar />
       </header>
+      <h1 className = "heading">Pickups Near Parkville, Victoria</h1>
+      <div display= "grid" className='grid four large'>
+        {displayThumbnails()}
+      </div>
     </div>
   );
 }

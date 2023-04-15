@@ -1,0 +1,54 @@
+.grid.two {
+	display: grid;
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+    grid-template-columns:  2fr 3fr;
+
+}
+
+.grid.large {
+	padding: 30px 50px;
+    margin: 0px 180px 0px 180px;
+
+}
+.foodItem {
+    margin-top: 80px;
+    width:max-content;
+}
+
+.imgIsolated{
+    border-radius: 20px;
+}
+.content {
+    font-size: 23px;
+}
+#name {
+    font-size: 30px;
+    font-weight: bold;
+}
+.claimButton {
+    border: none;
+    margin-top: 100px;
+    padding: 25px 80px 25px 80px;
+    object-fit: cover;
+    border-radius: 30px;
+    background-color:#004AAD;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.sellerContent {
+    font-size: 20px;
+    color: #004AAD;
+}
+
+.try.grid {
+    display: grid;
+	grid-column-gap: 0px;
+	grid-row-gap:0px;
+    grid-template-columns:  1fr 3fr;
+    margin: 50px 0 0 240px;
+    width:max-content;
+}

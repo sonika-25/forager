@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+.grid.four {
+	display: grid;
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
+  grid-template-columns:  1fr 1fr 1fr;
+}
+.grid.large {
+	padding: 30px 50px;
+  margin: 0px 180px 0px 180px;
+
+}
+.heading {
+  margin-top: 80px;
+  color: #004AAD;
+}
