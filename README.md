@@ -1,7 +1,7 @@
 This project was made for CODEBREW 2023. 
 
 To run the project: 
-1. git clone '<repo link>'
+1. git clone 'https://github.com/sonika-25/forager.git'
 2. go inside repo and run 'npm install'
 3. npm start
 
